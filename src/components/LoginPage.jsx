@@ -317,7 +317,7 @@ const LoginPage = ({ isOpen, onClose, onLoginSuccess, requireOrderChoice = false
 
       {/* Modal Container */}
       <div
-        className={`relative z-10 w-full ${step === 'orderChoice' ? 'max-w-md' : 'max-w-lg'} bg-white rounded-2xl shadow-2xl transition-all duration-300 ease-in-out transform flex flex-col max-h-[90vh] text-gray-900 ${isAnimating ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}
+        className={`relative z-10 w-[90%] sm:w-full mx-auto ${step === 'orderChoice' ? 'max-w-sm' : 'max-w-md'} bg-white rounded-2xl shadow-2xl transition-all duration-300 ease-in-out transform flex flex-col max-h-[85vh] text-gray-900 ${isAnimating ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}
       >
         <div className={`flex flex-col flex-1 w-full min-h-0 transition-opacity duration-200 ${isStepTransitioning ? 'opacity-0' : 'opacity-100'}`}>
           {step === 'emailCheck' ? (
@@ -331,7 +331,7 @@ const LoginPage = ({ isOpen, onClose, onLoginSuccess, requireOrderChoice = false
                 </button>
                 <div className="w-24 h-24 mb-3">
                   <img
-                    src="https://scontent.fmnl14-2.fna.fbcdn.net/v/t39.30808-6/414820211_24446117301670315_6333978278326920804_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeHj56M924AN-nIC1b_7dsVv3gU-2rzyePneBT7avPJ4-RdZS6-sbisgarqtK_nSSKkN_aUrFcX-xoNaICHUj10m&_nc_ohc=nImjurVIoNwQ7kNvwGCCqfR&_nc_oc=AdoKVu7D_Xy0WbGzHlbjY5ZtEtagrzXFKs89apVHwZas6GAdMkUTnneMx7UiciMlAzI&_nc_zt=23&_nc_ht=scontent.fmnl14-2.fna&_nc_gid=ljmFn3p0w6petYuAHS2a8g&_nc_ss=7a2a8&oh=00_Af12ECLaP_rCRhhKpKb84HvJSlNiCUZyg_-MZG5LjZGzdQ&oe=69EF4AC5"
+                    src="/gc-logo.png"
                     alt="Logo"
                     className="w-full h-full object-contain rounded-full"
                   />
@@ -339,19 +339,7 @@ const LoginPage = ({ isOpen, onClose, onLoginSuccess, requireOrderChoice = false
                 <div className="font-bold text-[#81130d] text-lg font-sans">{t('email')}</div>
               </div>
 
-              <div className="px-12 py-10 flex flex-col items-center flex-1 overflow-y-auto custom-scrollbar">
-                <style>{`
-                  .custom-scrollbar::-webkit-scrollbar {
-                    width: 5px;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-track {
-                    background: transparent;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-thumb {
-                    background-color: #e5e7eb;
-                    border-radius: 20px;
-                  }
-                `}</style>
+              <div className="px-12 py-10 flex flex-col items-center flex-1 overflow-y-auto">
                 <div className="w-full text-left font-medium text-gray-400 mb-4 text-lg">
                   {t('email_check')}
                 </div>
@@ -401,22 +389,7 @@ const LoginPage = ({ isOpen, onClose, onLoginSuccess, requireOrderChoice = false
                 <div className="font-bold text-[#81130d] text-lg font-sans">{t('register')}</div>
               </div>
 
-              <div className="px-12 py-8 flex flex-col items-center flex-1 overflow-y-auto custom-scrollbar">
-                <style>{`
-                  .custom-scrollbar::-webkit-scrollbar {
-                    width: 6px;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-track {
-                    background: transparent;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-thumb {
-                    background-color: #e5e7eb;
-                    border-radius: 20px;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-                    background-color: #d1d5db;
-                  }
-                `}</style>
+              <div className="px-12 py-8 flex flex-col items-center flex-1 overflow-y-auto">
                 <div className="w-full mb-4 text-center">
                   <p className="text-green-600 font-bold text-sm mb-2">Email address is valid!</p>
                 </div>
@@ -591,19 +564,7 @@ const LoginPage = ({ isOpen, onClose, onLoginSuccess, requireOrderChoice = false
                 <div className="font-bold text-[#640a0a] text-xl font-sans tracking-tight">Login</div>
               </div>
 
-              <div className="px-12 py-12 flex flex-col items-center flex-1 overflow-y-auto custom-scrollbar">
-                <style>{`
-                  .custom-scrollbar::-webkit-scrollbar {
-                    width: 5px;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-track {
-                    background: transparent;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-thumb {
-                    background-color: #e5e7eb;
-                    border-radius: 20px;
-                  }
-                `}</style>
+              <div className="px-12 py-12 flex flex-col items-center flex-1 overflow-y-auto">
                 <div className="w-full mb-10 text-center">
                   <p className="text-gray-400 font-medium text-[16px] tracking-wide">
                     Logging in as <span className="text-gray-900 font-extrabold ml-1">{initialEmail || email}</span>
@@ -649,19 +610,7 @@ const LoginPage = ({ isOpen, onClose, onLoginSuccess, requireOrderChoice = false
               </div>
             </div>
           ) : step === 'orderChoice' ? (
-            <div className="w-full flex-1 flex flex-col items-center justify-center text-center p-10 sm:p-14 overflow-y-auto custom-scrollbar">
-                <style>{`
-                  .custom-scrollbar::-webkit-scrollbar {
-                    width: 5px;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-track {
-                    background: transparent;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-thumb {
-                    background-color: #e5e7eb;
-                    border-radius: 20px;
-                  }
-                `}</style>
+            <div className="w-full flex-1 flex flex-col items-center justify-center text-center p-10 sm:p-14 overflow-y-auto">
               <h2 className="text-[26px] sm:text-[32px] font-black text-[#640a0a] mb-12 leading-tight">
                 {t('receive_order')}
               </h2>
@@ -687,16 +636,9 @@ const LoginPage = ({ isOpen, onClose, onLoginSuccess, requireOrderChoice = false
                   <span>{t('order_delivery')}</span>
                 </button>
               </div>
-
-              <button
-                onClick={() => handleConfirmOrder('later')}
-                className="mt-12 text-gray-400 font-bold text-[16px] hover:text-[#640a0a] underline transition-colors"
-              >
-                {t('decide_later')}
-              </button>
             </div>
           ) : step === 'pickupSelect' ? (
-            <div className="w-full flex-1 flex flex-col bg-white overflow-hidden text-left">
+            <div className="w-full flex-1 flex flex-col bg-white overflow-hidden text-left rounded-2xl">
               {/* Header */}
               <div className="flex items-start space-x-4 p-8 pb-4 relative">
                 <button onClick={onClose} className="absolute right-6 top-6 text-gray-500 hover:text-gray-700 p-1 transition-colors">
@@ -720,19 +662,7 @@ const LoginPage = ({ isOpen, onClose, onLoginSuccess, requireOrderChoice = false
               </div>
 
               {/* Form Content */}
-              <div className="px-8 py-2 space-y-5 overflow-y-auto flex-1 custom-scrollbar">
-                <style>{`
-                  .custom-scrollbar::-webkit-scrollbar {
-                    width: 5px;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-track {
-                    background: transparent;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-thumb {
-                    background-color: #e5e7eb;
-                    border-radius: 20px;
-                  }
-                `}</style>
+              <div className="px-8 py-2 space-y-5 overflow-y-auto flex-1" style={{scrollbarWidth: 'thin', scrollbarColor: '#9ca3af transparent'}}>
                 <div className="flex flex-col space-y-1.5">
                   <label className="text-[14px] font-extrabold text-gray-900">{t('pickup_location')}</label>
                   <div className="flex items-center justify-between px-4 py-4 bg-gray-50/80 border border-gray-100 rounded-xl cursor-pointer hover:bg-gray-100 transition-all">
@@ -822,7 +752,7 @@ const LoginPage = ({ isOpen, onClose, onLoginSuccess, requireOrderChoice = false
               </div>
             </div>
           ) : step === 'deliverySelect' ? (
-            <div className="w-full flex-1 flex flex-col bg-white overflow-hidden text-left">
+            <div className="w-full flex-1 flex flex-col bg-white overflow-hidden text-left rounded-2xl">
               {/* Header */}
               <div className="flex items-start space-x-4 p-8 pb-4 relative">
                 <button onClick={onClose} className="absolute right-6 top-6 text-gray-500 hover:text-gray-700 p-1 transition-colors">
@@ -842,19 +772,7 @@ const LoginPage = ({ isOpen, onClose, onLoginSuccess, requireOrderChoice = false
               </div>
 
               {/* Form Content */}
-              <div className="px-8 py-2 space-y-5 overflow-y-auto flex-1 custom-scrollbar">
-                <style>{`
-                  .custom-scrollbar::-webkit-scrollbar {
-                    width: 5px;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-track {
-                    background: transparent;
-                  }
-                  .custom-scrollbar::-webkit-scrollbar-thumb {
-                    background-color: #e5e7eb;
-                    border-radius: 20px;
-                  }
-                `}</style>
+              <div className="px-8 py-2 space-y-5 overflow-y-auto flex-1" style={{scrollbarWidth: 'thin', scrollbarColor: '#9ca3af transparent'}}>
                 <div className="flex flex-col space-y-1.5">
                   <label className="text-[14px] font-extrabold text-gray-900">{t('delivery_address')}</label>
                   <div className="relative">

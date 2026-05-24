@@ -13,6 +13,7 @@ import SidebarMenu from './components/SidebarMenu';
 import OrderSummaryModal from './components/OrderSummaryModal';
 import AccountSettingsModal from './components/AccountSettingsModal';
 import LogoutAccountModal from './components/LogoutAccountModal';
+import LogoutConfirmModal from './components/LogoutConfirmModal';
 import OrdersModal from './components/OrdersModal';
 import CheckoutModal from './components/CheckoutModal';
 import PrivacyModal from './components/PrivacyModal';
@@ -56,6 +57,7 @@ function App() {
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
   const [showAccountSettings, setShowAccountSettings] = useState(false);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
+  const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
   const [showOrdersModal, setShowOrdersModal] = useState(false);
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const [showCookieModal, setShowCookieModal] = useState(false);
@@ -343,7 +345,7 @@ function App() {
   };
 
   const handleLogout = () => {
-    setShowLogoutModal(true);
+    setShowLogoutConfirm(true);
   };
 
   const handleLogoutConfirm = () => {
@@ -435,9 +437,15 @@ function App() {
           onOrdersClick={() => setShowOrdersModal(true)}
           showCartToast={showCartToast}
           toastProduct={toastProduct}
+          onAboutClick={() => { setCurrentPage('home'); setTimeout(() => { const el = document.getElementById('about-section'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100); }}
+          onPrivacyClick={() => setShowPrivacyModal(true)}
+          onCookieClick={() => setShowCookieModal(true)}
+          onStoresClick={() => setShowStoresModal(true)}
+          onTermsClick={() => setShowTermsModal(true)}
+          onHelpClick={() => setShowHelpModal(true)}
         />
       ) : (
-        <>
+        <div className="flex-1 overflow-y-auto" style={{scrollbarWidth: 'thin', scrollbarColor: 'rgba(255,255,255,0.4) transparent'}}>
           <Navbar
             onMenuClick={() => setIsSidebarOpen(true)}
             onLoginClick={() => { setLoginInitialStep('emailCheck'); setShowLoginModal(true); }}
@@ -495,19 +503,16 @@ function App() {
             onCookieClick={() => setShowCookieModal(true)}
             onStoresClick={() => setShowStoresModal(true)}
             onAboutClick={() => {
-              const el = document.getElementById('about-section');
-              const container = document.getElementById('app-root');
-              if (el && container) {
-                const top = el.offsetTop;
-                container.scrollTo({ top, behavior: 'smooth' });
-              } else if (el) {
-                el.scrollIntoView({ behavior: 'smooth' });
-              }
+              setCurrentPage('home');
+              setTimeout(() => {
+                const el = document.getElementById('about-section');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }, 100);
             }}
             onTermsClick={() => setShowTermsModal(true)}
             onHelpClick={() => setShowHelpModal(true)}
           />
-        </>
+        </div>
       )}
 
       {/* Shared Modals & Navigation Components */}
@@ -585,6 +590,14 @@ function App() {
       <HelpCenterModal
         isOpen={showHelpModal}
         onClose={() => setShowHelpModal(false)}
+      />
+      <LogoutConfirmModal
+        isOpen={showLogoutConfirm}
+        onCancel={() => setShowLogoutConfirm(false)}
+        onConfirm={() => {
+          setShowLogoutConfirm(false);
+          setShowLogoutModal(true);
+        }}
       />
       <LogoutAccountModal
         isOpen={showLogoutModal}

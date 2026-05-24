@@ -11,22 +11,22 @@ const slides = [
   {
     subtitle: 'Food Bilao',
     title: 'Any gatherings for this Holy Week? Try our Food Bilao',
-    img: 'https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/667681651_34846453068303301_786827027501367100_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFd2zVGs1OZSfEgHUkb0QQrcShOQ_SJcIZxKE5D9Ilwhk0i5eaDwya8A6xqjPjgvmS7QpNUxdm9S7a8TWVlb3KW&_nc_ohc=e6ldTO_A3oUQ7kNvwEmZKmL&_nc_oc=Adq1Oafh-mmNjKxEgj9gcViN2nzNACQFb2_QefuZNy3yIPaZXprrI2aQjbFPRw3dkR4&_nc_zt=23&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=st5mxzvS95kX3D4Kx_vlsA&_nc_ss=7b2a8&oh=00_Af0HsylmKV9eHj1hA7kiRCLdhgPK_OAnuPainVknC_xP6Q&oe=69EF9259',
+    img: '/food-bilao.jpg.jpg',
   },
   {
     subtitle: 'Hotpot',
     title: "Set C (for 3 Person)\nRABOKKI \u00A0 ₱ 399.00",
-    img: 'https://scontent-mnl3-1.xx.fbcdn.net/v/t39.30808-6/647066600_34169568915991723_4962407058866573785_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeHsjza2mF2n_bEloQCVfpoLJtR_7R-XtXkm1H_tH5e1eZvY0Tr8D04Os_7qs5z4W8RxcRE-tt3gbrCuTnayHdSb&_nc_ohc=BkO-XC8G4Y0Q7kNvwF16xWd&_nc_oc=AdqCb--F6WbO3vfpMzuIqQcBCty-UNQlXKfcZoKkh57IFBHZB3EIoNdLbrxnMnSuYrI&_nc_zt=23&_nc_ht=scontent-mnl3-1.xx&_nc_gid=Fl7kaAQTOX6Uc61tl7uS9A&_nc_ss=7b2a8&oh=00_Af0dMqW73TVIg2aYVKRpd1254k51vMy-YzwtjMBBsVLRyg&oe=69EFA031',
+    img: '/hotpot-ramen.jpg.jpg',
   },
   {
     subtitle: 'Last day of our',
     title: 'UNLIMITED RICE TODAY!!!',
-    img: 'https://scontent.fmnl14-1.fna.fbcdn.net/v/t39.30808-6/643602166_34077204388561510_4311205135461664176_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFmz4FuOA0vPpVDQm2L8wAzMqstxRj24VMyqy3FGPbhUzNe70VXW1BNfBYBTq7O1lmVSBrhDaqFRmXnK0gGht-l&_nc_ohc=gvD8l75w3XEQ7kNvwFvd96T&_nc_oc=Adpijq5_1I_jDnF91zSBqH0c26Px_DyHmwGSnw-rZYy1JnmrDKlRetEFQMxcMNtsX_o&_nc_zt=23&_nc_ht=scontent.fmnl14-1.fna&_nc_gid=yD7EmFZLajFfvYkr4HJ0tQ&oh=00_Af2LaWiD7Sgsaw09v8tAdBtnYcYnHm0R6FbbiSBjGoImVw&oe=69EF8E79',
+    img: '/rice-cup.png',
   },
   {
     subtitle: 'Samgyupsal Special',
     title: "Set 3 (for 4-6 Person)\n₱ 899.00",
-    img: 'https://scontent-mnl1-2.xx.fbcdn.net/v/t39.30808-6/643446703_34085167147765234_1599485213386011366_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeH6xt5H90_UVzApOyNZAcqsll4VDcBDJA-WXhUNwEMkD8ACZDBmmFQ-4glzswVtf_crMkLaHt1TfUIkuRzuc3KY&_nc_ohc=Bf_0aFhpTZYQ7kNvwH7MapH&_nc_oc=Ado7blV3wlDv4FzqcLh0wti4c5y00VbR7jY1mqV0eLyAUeysQV-fr_Ys3Ne8Q_KzPp8&_nc_zt=23&_nc_ht=scontent-mnl1-2.xx&_nc_gid=mDgTy2XhrMEOh6CsVUJ30g&oh=00_Af3GVKPmoxAiC6vzghL_h47keqqsoypnWErxKKtO5EHmcw&oe=69EF9489',
+    img: '/food-bilao.jpg.jpg',
   },
 ];
 

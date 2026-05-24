@@ -81,9 +81,9 @@ const HelpCenterModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100000] flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm animate-fadeIn">
+    <div className="fixed inset-0 z-[100000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn">
       <div
-        className="bg-white rounded-t-[28px] sm:rounded-[32px] w-full sm:max-w-2xl shadow-2xl relative flex flex-col max-h-[92vh] sm:max-h-[90vh] overflow-hidden animate-slideUp"
+        className="bg-white rounded-[28px] w-[90%] sm:w-full sm:max-w-2xl shadow-2xl relative flex flex-col max-h-[85vh] sm:max-h-[90vh] overflow-hidden animate-slideUp"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -103,7 +103,7 @@ const HelpCenterModal = ({ isOpen, onClose }) => {
         </div>
 
         {/* Content */}
-        <div className="p-5 sm:p-8 overflow-y-auto custom-scroll font-sans space-y-6">
+        <div className="p-5 sm:p-8 overflow-y-auto font-sans space-y-6">
           <p className="text-gray-600 font-medium leading-relaxed">
             Welcome to the G.C. Korean BBQ Help Center. We are here to assist you with your orders, dining experience, and general inquiries.
           </p>

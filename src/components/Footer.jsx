@@ -54,10 +54,10 @@ const Footer = ({ onAboutClick, onCorporateClick, onPrivacyClick, onCookieClick,
       </div>
 
       {/* Bottom Section */}
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-8 flex flex-col md:flex-row justify-between items-center text-[12px] text-gray-500 gap-4 md:gap-0">
+      <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-8 flex flex-col items-center text-[12px] text-gray-500 gap-4">
 
         {/* Text */}
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-2 text-center">
           <p>{t('footer_text1')}</p>
           <p>{t('footer_text2')}</p>
         </div>

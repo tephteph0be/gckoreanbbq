@@ -4,9 +4,9 @@ const StoresModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100000] flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm animate-fadeIn">
+    <div className="fixed inset-0 z-[100000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn">
       <div 
-        className="bg-white rounded-t-[28px] sm:rounded-[32px] w-full sm:max-w-lg shadow-2xl relative flex flex-col max-h-[92vh] sm:max-h-[90vh] overflow-hidden animate-slideUp"
+        className="bg-white rounded-[28px] w-[90%] sm:w-full sm:max-w-lg shadow-2xl relative flex flex-col max-h-[85vh] sm:max-h-[90vh] overflow-hidden animate-slideUp"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -23,7 +23,7 @@ const StoresModal = ({ isOpen, onClose }) => {
         </div>
 
         {/* Content */}
-        <div className="p-5 sm:p-8 overflow-y-auto custom-scroll text-gray-700 leading-relaxed font-sans text-center">
+        <div className="p-5 sm:p-8 overflow-y-auto text-gray-700 leading-relaxed font-sans text-center">
           <p className="text-[18px] font-bold text-gray-900 mb-8 leading-relaxed">
             Visit G.C. Korean BBQ and enjoy a complete Korean dining experience.
           </p>

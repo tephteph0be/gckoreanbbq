@@ -44,7 +44,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems = [], onSelectItemFulfillmen
 
   return (
     <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fadeIn" onClick={onClose}>
-      <div className="bg-white w-full max-w-lg rounded-[32px] shadow-2xl flex flex-col overflow-hidden animate-slideUp max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white w-[90%] sm:w-full max-w-lg rounded-[28px] shadow-2xl flex flex-col overflow-hidden animate-slideUp max-h-[85vh] sm:max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
         {/* Header */}
         <div className="flex items-center justify-between p-6 pb-4 border-b border-gray-100">
           <div className="flex items-center space-x-3">
@@ -59,7 +59,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems = [], onSelectItemFulfillmen
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-6 custom-scroll">
+        <div className="flex-1 overflow-y-auto p-6 space-y-6">
           <div className="space-y-4">
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-[13px] font-bold text-gray-400 uppercase tracking-wider">Order Items</h3>

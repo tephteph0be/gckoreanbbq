@@ -37,11 +37,11 @@ const OrdersModal = ({ isOpen, onClose, orders = [], onCancelOrders }) => {
 
   return (
     <div 
-      className="fixed inset-0 z-[100000] flex items-end sm:items-center justify-center sm:p-4 bg-black/60 backdrop-blur-sm animate-fadeIn"
+      className="fixed inset-0 z-[100000] flex items-center justify-center p-4 sm:p-4 bg-black/60 backdrop-blur-sm animate-fadeIn"
       onClick={onClose}
     >
       <div 
-        className="bg-white rounded-t-[28px] sm:rounded-[32px] w-full sm:max-w-2xl shadow-2xl relative flex flex-col max-h-[92vh] sm:max-h-[90vh] overflow-hidden animate-slideUp"
+        className="bg-white rounded-[28px] sm:rounded-[32px] w-[90%] sm:w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl mx-auto shadow-2xl relative flex flex-col max-h-[85vh] sm:max-h-[80vh] md:max-h-[85vh] overflow-hidden animate-slideUp"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -78,7 +78,7 @@ const OrdersModal = ({ isOpen, onClose, orders = [], onCancelOrders }) => {
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 custom-scroll">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4" style={{scrollbarWidth: 'thin', scrollbarColor: '#9ca3af transparent'}}>
           {isSelectionMode && orders.length > 0 && (
             <div className="flex items-center justify-between mb-2 animate-fadeIn bg-gray-50/50 p-3 rounded-2xl border border-gray-100">
               <div className="flex items-center space-x-3">

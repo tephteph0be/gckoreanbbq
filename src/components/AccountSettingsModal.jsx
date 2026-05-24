@@ -93,11 +93,11 @@ const AccountSettingsModal = ({ isOpen, onClose, currentUser, onSave }) => {
 
   return (
     <div 
-      className="fixed inset-0 z-[100000] flex items-end sm:items-center justify-center sm:p-4 bg-black/70 backdrop-blur-sm animate-fadeIn"
+      className="fixed inset-0 z-[100000] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn"
       onClick={onClose}
     >
       <div 
-        className="bg-white rounded-t-[28px] sm:rounded-[32px] w-full sm:max-w-md shadow-2xl relative flex flex-col max-h-[92vh] sm:max-h-[90vh] overflow-hidden animate-slideUp"
+        className="bg-white rounded-[28px] sm:rounded-[32px] w-[90%] sm:w-full sm:max-w-md shadow-2xl relative flex flex-col max-h-[85vh] sm:max-h-[90vh] overflow-hidden animate-slideUp"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -109,7 +109,7 @@ const AccountSettingsModal = ({ isOpen, onClose, currentUser, onSave }) => {
         </div>
 
         {/* Content */}
-        <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto custom-scroll p-5 sm:p-6 space-y-5 sm:space-y-6">
+        <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto p-5 sm:p-6 space-y-5 sm:space-y-6" style={{scrollbarWidth: 'thin', scrollbarColor: '#9ca3af transparent'}}>
           {error && (
             <div className="p-4 bg-red-50 border border-red-200 text-red-600 rounded-xl text-sm font-bold flex items-start space-x-2 animate-shake">
               <svg className="w-5 h-5 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"></path></svg>

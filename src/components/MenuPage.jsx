@@ -20,7 +20,7 @@ const MenuPage = ({ onSignupClick, onMenuClick }) => {
           {/* Logo & Brand */}
           <div className="flex items-center space-x-2 sm:space-x-3">
             <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-[#5B0F0F] shrink-0">
-              <img src="https://scontent.fcgy3-1.fna.fbcdn.net/v/t39.30808-6/414820211_24446117301670315_6333978278326920804_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeEXJ36LF9haifjA8PiXJHwI3gU-2rzyePneBT7avPJ4-YBgtNNb-n6LJaxo79bdUbR_qYaYREUTC9vK8zEG4wto&_nc_ohc=kQU5c_6LFzQQ7kNvwFHNwwA&_nc_oc=AdoUfv7BYH8uZUeAx7lpwZFml_4JCyO-uOg13aNAkL2sSoJZ0cSItg2fUDNt8hSpMQY&_nc_zt=23&_nc_ht=scontent.fcgy3-1.fna&_nc_gid=4GzpRPR2rSh1xW1IS6ynEA&_nc_ss=7a3a8&oh=00_Af2hNIOK4TgSBzjgLgx19uf7m6Z-txr8Ww8n9FianaW9Tw&oe=69E17305" className="w-full h-full object-cover" alt="Logo" />
+              <img src="/gc-logo.png" className="w-full h-full object-cover" alt="Logo" />
             </div>
             <span className="text-lg sm:text-2xl font-bold font-display tracking-tight whitespace-nowrap">G.C. KOREAN BBQ</span>
           </div>
@@ -47,7 +47,7 @@ const MenuPage = ({ onSignupClick, onMenuClick }) => {
           {t('samgyupsal_hotpot')}
         </div>
 
-        <div className="flex space-x-2 sm:space-x-3 ml-2 sm:ml-4 z-10 overflow-x-auto whitespace-nowrap hide-scroll-bar py-1">
+        <div className="flex space-x-2 sm:space-x-3 ml-2 sm:ml-4 z-10 overflow-x-auto whitespace-nowrap py-1">
           <button className="px-3 py-1.5 sm:px-5 sm:py-2 bg-white text-gray-800 font-bold rounded-full text-[10px] sm:text-sm shadow-sm opacity-90">{t('gc_short_order')}</button>
           <button className="px-3 py-1.5 sm:px-5 sm:py-2 bg-white text-gray-800 font-bold rounded-full text-[10px] sm:text-sm shadow-sm opacity-90">{t('samgyup_on_the_go')}</button>
           <button className="px-3 py-1.5 sm:px-5 sm:py-2 bg-white text-gray-800 font-bold rounded-full text-[10px] sm:text-sm shadow-sm opacity-90">{t('bbq')}</button>

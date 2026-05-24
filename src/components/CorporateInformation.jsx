@@ -1,12 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const CorporateInformation = ({ onClose }) => {
+  const containerRef = useRef(null);
+
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Scroll the parent scrollable container to top
+    if (containerRef.current) {
+      const scrollParent = containerRef.current.closest('.overflow-y-auto');
+      if (scrollParent) scrollParent.scrollTop = 0;
+    }
   }, []);
 
   return (
-    <div className="flex flex-col animate-fadeIn bg-white min-h-full w-full font-sans text-black pb-12">
+    <div id="corporate-section" ref={containerRef} className="flex flex-col animate-fadeIn bg-white w-full font-sans text-black pb-12">
       
       <div className="px-8 py-6 mb-2 border-b border-gray-100">
         <h2 className="text-[22px] font-bold tracking-tight text-[#640a0a]">Corporate Information</h2>
@@ -43,7 +49,7 @@ const CorporateInformation = ({ onClose }) => {
              
              {/* Logo */}
              <div className="w-48 h-48 sm:w-56 sm:h-56 shrink-0 flex items-center justify-center">
-               <img src="https://scontent.fmnl14-2.fna.fbcdn.net/v/t39.30808-6/414820211_24446117301670315_6333978278326920804_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeHj56M924AN-nIC1b_7dsVv3gU-2rzyePneBT7avPJ4-RdZS6-sbisgarqtK_nSSKkN_aUrFcX-xoNaICHUj10m&_nc_ohc=nImjurVIoNwQ7kNvwGCCqfR&_nc_oc=AdoKVu7D_Xy0WbGzHlbjY5ZtEtagrzXFKs89apVHwZas6GAdMkUTnneMx7UiciMlAzI&_nc_zt=23&_nc_ht=scontent.fmnl14-2.fna&_nc_gid=ljmFn3p0w6petYuAHS2a8g&_nc_ss=7a2a8&oh=00_Af12ECLaP_rCRhhKpKb84HvJSlNiCUZyg_-MZG5LjZGzdQ&oe=69EF4AC5" alt="GC Korean BBQ Logo" className="w-full h-full object-contain" />
+               <img src="/gc-logo.png" alt="GC Korean BBQ Logo" className="w-full h-full object-contain" />
              </div>
           </div>
 
@@ -51,20 +57,18 @@ const CorporateInformation = ({ onClose }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <div className="py-6 sm:py-8 bg-white">
                <div className="flex items-center space-x-3 mb-4">
-                 {/* Target Icon */}
                  <svg className="w-8 h-8 text-[#640a0a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" /></svg>
                  <h2 className="text-[17px] font-black text-[#640a0a] tracking-widest uppercase">Mission</h2>
                </div>
-               <p className="text-gray-800 text-[16px] leading-relaxed">To be the favorite Korean BBQ spot<br className="hidden sm:block"/>for food lovers.</p>
+               <p className="text-gray-800 text-[16px] leading-relaxed">To be the favorite Korean BBQ spot <br className="hidden sm:block"/>for food lovers.</p>
             </div>
             
             <div className="py-6 sm:py-8 bg-white">
                <div className="flex items-center space-x-3 mb-4">
-                 {/* Eye Icon */}
                  <svg className="w-8 h-8 text-[#640a0a]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                  <h2 className="text-[17px] font-black text-[#640a0a] tracking-widest uppercase">Vision</h2>
                </div>
-               <p className="text-gray-800 text-[16px] leading-relaxed">To bring people together through Korean<br className="hidden sm:block"/>food, drinks, and unforgettable moments.</p>
+               <p className="text-gray-800 text-[16px] leading-relaxed">To bring people together through Korean <br className="hidden sm:block"/>food, drinks, and unforgettable moments.</p>
             </div>
           </div>
 

@@ -23,7 +23,7 @@ const MenuCard = ({ title, subtitle, details, price, isRice, imageSrc, onOrderNo
           )}
         </div>
         <div>
-          <button onClick={onOrderNow} className="bg-[#7c1414] border border-[#a32212] text-white text-[8.5px] sm:text-xs font-semibold px-2 sm:px-4 py-1 sm:py-1.5 rounded hover:bg-[#5B0F0F] transition shadow-md active:scale-95">
+          <button onClick={onOrderNow} className="bg-[#7c1414] border border-[#a32212] text-white text-[8.5px] sm:text-xs font-semibold px-2 sm:px-4 py-1 sm:py-1.5 rounded hover:bg-white hover:text-[#7c1414] hover:border-[#7c1414] hover:scale-105 transition-all duration-200 shadow-md active:scale-95">
             Order Now
           </button>
         </div>

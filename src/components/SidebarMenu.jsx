@@ -42,7 +42,7 @@ const SidebarMenu = ({
           {/* Logo */}
           <div className="w-32 h-32 mb-4 mt-2">
             <img
-              src="https://scontent.fmnl14-2.fna.fbcdn.net/v/t39.30808-6/414820211_24446117301670315_6333978278326920804_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeHj56M924AN-nIC1b_7dsVv3gU-2rzyePneBT7avPJ4-RdZS6-sbisgarqtK_nSSKkN_aUrFcX-xoNaICHUj10m&_nc_ohc=nImjurVIoNwQ7kNvwGCCqfR&_nc_oc=AdoKVu7D_Xy0WbGzHlbjY5ZtEtagrzXFKs89apVHwZas6GAdMkUTnneMx7UiciMlAzI&_nc_zt=23&_nc_ht=scontent.fmnl14-2.fna&_nc_gid=ljmFn3p0w6petYuAHS2a8g&_nc_ss=7a2a8&oh=00_Af12ECLaP_rCRhhKpKb84HvJSlNiCUZyg_-MZG5LjZGzdQ&oe=69EF4AC5"
+              src="/gc-logo.png"
               alt="Logo"
               className="w-full h-full object-cover rounded-full"
             />
@@ -106,7 +106,21 @@ const SidebarMenu = ({
               if (onOrderClick) onOrderClick();
             }}
             className="py-5 w-full hover:bg-[#4a1f02] transition-colors">
-            {t('order_now')}</div>
+            {t('order_now')}
+          </div>
+          <div
+            onClick={() => {
+              onClose();
+              if (onHomeClick) onHomeClick();
+              setTimeout(() => {
+                const el = document.getElementById('about-section');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }, 300);
+            }}
+            className="py-5 w-full hover:bg-[#4a1f02] transition-colors"
+          >
+            {t('about_us') || 'About Us'}
+          </div>
           <div 
             onClick={() => {
               onClose();

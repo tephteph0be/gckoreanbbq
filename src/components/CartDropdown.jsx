@@ -59,12 +59,20 @@ const CartDropdown = ({ isOpen, onClose, cartItems = [], orderInfo = {}, onRemov
   const subtotal = normalizedItems.reduce((acc, item) => acc + item.totalItemPrice, 0);
 
   return (
-    <div ref={dropdownRef} className="fixed inset-x-0 bottom-0 sm:absolute sm:inset-auto sm:top-14 sm:right-0 sm:w-[420px] bg-white sm:rounded-2xl rounded-t-[24px] shadow-2xl z-[500] border border-gray-100 animate-fadeIn overflow-hidden flex flex-col max-h-[85vh]">
-      {/* Pointer */}
-      <div className="absolute -top-2 right-[60px] w-4 h-4 bg-white border-l border-t border-gray-100 rotate-45"></div>
+    <>
+      {/* Mobile backdrop */}
+      <div className="sm:hidden fixed inset-0 z-[499]" onClick={onClose}></div>
+      <div ref={dropdownRef} className="fixed right-2 top-16 w-[88vw] max-w-[340px] sm:absolute sm:inset-auto sm:translate-y-0 sm:top-14 sm:right-0 sm:w-[420px] bg-white rounded-2xl shadow-2xl z-[500] border border-gray-100 animate-fadeIn overflow-hidden flex flex-col max-h-[55vh] sm:max-h-[85vh]">
+      {/* Drag handle — mobile only */}
+      <div className="sm:hidden flex justify-center pt-3 pb-1 shrink-0">
+        <div className="w-10 h-1 bg-gray-200 rounded-full"></div>
+      </div>
+
+      {/* Pointer — desktop only */}
+      <div className="hidden sm:block absolute -top-2 right-[60px] w-4 h-4 bg-white border-l border-t border-gray-100 rotate-45"></div>
 
       {/* Header */}
-      <div className="px-6 py-5 flex items-center justify-between border-b border-gray-100 shrink-0">
+      <div className="px-4 sm:px-6 py-3 sm:py-5 flex items-center justify-between border-b border-gray-100 shrink-0">
         <h3 className="text-[18px] font-bold text-gray-900">{t('my_cart')} ({normalizedItems.length})</h3>
         {normalizedItems.length > 0 && (
           <button 
@@ -77,7 +85,7 @@ const CartDropdown = ({ isOpen, onClose, cartItems = [], orderInfo = {}, onRemov
       </div>
 
       {/* Items List */}
-      <div className="flex-1 overflow-y-auto custom-scroll px-6 py-4 space-y-5">
+      <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-3 sm:py-4 space-y-4">
         {normalizedItems.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-12 text-center">
             <svg className="w-14 h-14 text-gray-200 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -134,7 +142,7 @@ const CartDropdown = ({ isOpen, onClose, cartItems = [], orderInfo = {}, onRemov
 
 
       {/* Footer */}
-      <div className="p-6 shrink-0">
+      <div className="p-4 sm:p-6 shrink-0">
         {normalizedItems.length > 0 && (
           <div className="flex items-center justify-between mb-4">
             <span className="text-[16px] font-bold text-gray-500">{t('subtotal')}</span>
@@ -154,6 +162,7 @@ const CartDropdown = ({ isOpen, onClose, cartItems = [], orderInfo = {}, onRemov
         </button>
       </div>
     </div>
+    </>
   );
 };
 

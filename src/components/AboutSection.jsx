@@ -10,14 +10,14 @@ const AboutSection = () => {
         {/* Left Side: Logo in White Box */}
         <div className="bg-white p-4 flex-shrink-0 border border-gray-200">
           <img
-            src="https://scontent.fmnl14-2.fna.fbcdn.net/v/t39.30808-6/414820211_24446117301670315_6333978278326920804_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeHj56M924AN-nIC1b_7dsVv3gU-2rzyePneBT7avPJ4-RdZS6-sbisgarqtK_nSSKkN_aUrFcX-xoNaICHUj10m&_nc_ohc=nImjurVIoNwQ7kNvwGTuPxG&_nc_oc=AdolGO90KagNLt-XW7sXB2DXJc41TYs15IFBSqtFpaU1oCaD2SBL1-pfYtqDMMah98U&_nc_zt=23&_nc_ht=scontent.fmnl14-2.fna&_nc_gid=TPvKmlv03wfj8t-O4mqa0A&_nc_ss=7b2a8&oh=00_Af1xDYYw4h8CVzjmGx7qH3ZJjv6H-Z3BRGxOiEzr4EcB-A&oe=69EF8305"
+            src="/gc-logo.png"
             alt="G.C. Korean BBQ Mascot"
             className="w-[280px] h-[280px] object-cover"
           />
         </div>
 
         {/* Right Side: Text Content */}
-        <div className="text-white text-left font-sans flex flex-col justify-center max-w-[700px]">
+        <div className="text-white text-center font-sans flex flex-col justify-center max-w-[700px]">
           <h2 className="text-3xl font-bold tracking-tight mb-3">
             {t('about_title')}
           </h2>
