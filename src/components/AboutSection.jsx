@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { getAssetUrl } from '../utils/assets';
 
 const AboutSection = () => {
   const { t } = useLanguage();
@@ -10,7 +11,7 @@ const AboutSection = () => {
         {/* Left Side: Logo in White Box */}
         <div className="bg-white p-4 flex-shrink-0 border border-gray-200">
           <img
-            src="./gc-logo.png"
+            src={getAssetUrl('gc-logo.png')}
             alt="G.C. Korean BBQ Mascot"
             className="w-[280px] h-[280px] object-cover"
           />

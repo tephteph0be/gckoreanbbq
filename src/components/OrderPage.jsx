@@ -4,6 +4,7 @@ import CartDropdown from './CartDropdown';
 import { useLanguage } from '../contexts/LanguageContext';
 import CorporateInformation from './CorporateInformation';
 import Footer from './Footer';
+import { getAssetUrl } from '../utils/assets';
 
 const categories = [
   { name: 'Samgyupsal', img: './samgyupsal-cat.jpg.jpg' },
@@ -205,7 +206,7 @@ const Banner = ({ onOrderNow }) => {
       <div className="absolute inset-0">
         <img
           key={currentSlide}
-          src={slides[currentSlide].image}
+          src={getAssetUrl(slides[currentSlide].image)}
           alt="Background"
           className="w-full h-full object-cover opacity-10 mix-blend-overlay animate-fadeIn"
         />
@@ -224,7 +225,7 @@ const Banner = ({ onOrderNow }) => {
 
         {/* Right: Image */}
         <div className="w-[130px] sm:w-[220px] h-[130px] sm:h-[150px] rounded-2xl overflow-hidden shadow-2xl shrink-0 animate-fadeIn bg-[#4d0707]">
-          <img src={slides[currentSlide].image} alt="Promotion" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+          <img src={getAssetUrl(slides[currentSlide].image)} alt="Promotion" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
         </div>
       </div>
 
@@ -268,7 +269,7 @@ const ProductGrid = ({ title, items, onProductClick, onSeeAll }) => {
         {items.map((item, idx) => (
           <div key={idx} onClick={() => onProductClick && onProductClick(item)} className="bg-white rounded-2xl p-4 flex flex-col shadow-lg relative object-contain cursor-pointer hover:scale-[1.02] transition-transform duration-200">
             <div className="w-full h-[200px] mb-3 overflow-hidden rounded-xl border border-gray-100 relative">
-              <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+              <img src={getAssetUrl(item.img)} alt={item.title} className="w-full h-full object-cover" />
               {item.badge && <div className="absolute bottom-2 left-2 bg-[#7d1919] text-white text-[11px] font-bold w-6 h-6 rounded-full flex items-center justify-center border border-white shadow-sm">{item.badge}</div>}
             </div>
             <div className="flex flex-col items-center justify-center flex-1 space-y-1">
@@ -421,7 +422,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
           <div key={idx} onClick={() => setSelectedProduct({ ...item, category: categoryName })} className="bg-white rounded-2xl p-4 flex flex-col shadow-lg cursor-pointer hover:scale-105 transition-transform duration-200">
             <div className="w-full h-[200px] mb-3 overflow-hidden rounded-xl border border-gray-100 relative">
               {item.badge && <div className="absolute top-2 left-2 bg-[#7A1111] text-white text-[11px] font-bold w-7 h-7 rounded-full flex items-center justify-center z-10 shadow-md border border-white/20">{item.badge}</div>}
-              <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+              <img src={getAssetUrl(item.img)} alt={item.title} className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col items-center justify-center flex-1 space-y-1">
               <h4 className="text-black font-semibold text-[15px] text-center px-1 whitespace-pre-line leading-tight">{item.title}</h4>
@@ -446,7 +447,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
             {samgyupsalAddOns.map((addon, idx) => (
               <div key={idx} className="flex flex-col items-center cursor-pointer group w-[90px] shrink-0">
                 <div className="w-[85px] h-[85px] rounded-full overflow-hidden bg-white mb-3 shadow-lg border-2 border-transparent group-hover:border-white group-hover:scale-105 transition-all duration-200">
-                  <img src={addon.img} alt={addon.name} className="w-full h-full object-cover" />
+                  <img src={getAssetUrl(addon.img)} alt={addon.name} className="w-full h-full object-cover" />
                 </div>
                 <span className="text-[11px] font-bold text-center leading-tight px-1 text-white">{addon.name}</span>
                 {addon.price && <span className="text-[10px] font-semibold text-yellow-300 mt-0.5">{addon.price}</span>}
@@ -462,7 +463,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
             {hotpotAddOns.map((addon, idx) => (
               <div key={idx} className="flex flex-col items-center cursor-pointer group w-[90px] shrink-0">
                 <div className="w-[85px] h-[85px] rounded-full overflow-hidden bg-white mb-3 shadow-lg border-2 border-transparent group-hover:border-white group-hover:scale-105 transition-all duration-200">
-                  <img src={addon.img} alt={addon.name} className="w-full h-full object-cover" />
+                  <img src={getAssetUrl(addon.img)} alt={addon.name} className="w-full h-full object-cover" />
                 </div>
                 <span className="text-[11px] font-bold text-center leading-tight px-1 text-white">{addon.name}</span>
                 {addon.price && <span className="text-[10px] font-semibold text-yellow-300 mt-0.5">{addon.price}</span>}
@@ -489,7 +490,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
             </button>
             <div onClick={() => { handleCategoryClick(null); setSelectedProduct(null); }} className="flex items-center space-x-1.5 sm:space-x-3 cursor-pointer">
               <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-white border border-white/20 shrink-0">
-                <img src="./gc-logo.png" alt="Logo" className="w-full h-full object-cover" />
+                <img src={getAssetUrl('gc-logo.png')} alt="Logo" className="w-full h-full object-cover" />
               </div>
               <span className="text-sm sm:text-2xl font-bold font-display tracking-tight text-white whitespace-nowrap">G.C. KOREAN BBQ</span>
             </div>
@@ -589,7 +590,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
           <div className="flex flex-col lg:flex-row flex-1 max-w-6xl mx-auto w-full gap-6 sm:gap-8 lg:gap-12 pb-6">
             <div className="w-full lg:w-[38%] shrink-0">
               <div className="w-full aspect-[4/5] sm:aspect-square rounded-[20px] sm:rounded-[28px] overflow-hidden shadow-xl border-4 border-white">
-                <img src={selectedProduct.img} alt={selectedProduct.title} className="w-full h-full object-cover" />
+                <img src={getAssetUrl(selectedProduct.img)} alt={selectedProduct.title} className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="flex-1 flex flex-col pt-0 text-black">
@@ -648,7 +649,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
                         >
                           <div className="relative pointer-events-none">
                             <div className={`w-[64px] h-[64px] rounded-full overflow-hidden bg-white shadow-sm border-2 transition-all duration-200 ${isSelected ? 'border-red-800 scale-105' : 'border-gray-100 group-hover:border-gray-300'}`}>
-                              <img src={addon.img} alt={addon.name} className="w-full h-full object-cover" />
+                              <img src={getAssetUrl(addon.img)} alt={addon.name} className="w-full h-full object-cover" />
                             </div>
                             {isSelected && (
                               <div className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-red-800 flex items-center justify-center border-2 border-white shadow-sm">
@@ -673,7 +674,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
                   <div className="absolute bottom-full right-0 mb-3 z-[100] animate-bounceIn w-[300px] pointer-events-none">
                     <div className="bg-white px-4 py-3 rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.15)] border border-gray-100 flex items-center space-x-3">
                       <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 shadow-sm border border-gray-50">
-                        <img src={toastProduct.img} alt="" className="w-full h-full object-cover" />
+                        <img src={getAssetUrl(toastProduct.img)} alt="" className="w-full h-full object-cover" />
                       </div>
                       <div className="flex-1">
                         <p className="text-[#640a0a] font-black text-[14px] leading-tight mb-0.5">Added to Cart!</p>
@@ -731,7 +732,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
                 return (
                   <div key={idx} onClick={() => handleCategoryClick(cat.name === activeCategory ? null : cat.name)} className={`group rounded-xl shadow-md p-1.5 flex items-center cursor-pointer transition duration-200 ${isActive ? 'bg-[#310c0c] text-white' : 'bg-white text-black hover:bg-red-950 hover:text-white'}`}>
                     <div className="w-[100px] h-[80px] rounded-lg overflow-hidden shrink-0">
-                      <img src={cat.img} alt={cat.name} className="w-full h-full object-cover" />
+                      <img src={getAssetUrl(cat.img)} alt={cat.name} className="w-full h-full object-cover" />
                     </div>
                     <div className={`flex-1 px-4 font-extrabold text-[17px] leading-tight tracking-tight ${isActive ? 'text-white' : 'text-black group-hover:text-white'}`}>{cat.name}</div>
                   </div>
@@ -747,7 +748,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
                     <div className="grid grid-cols-3 gap-y-6 gap-x-2 pt-2 pb-4">
                       {samgyupsalAddOns.map((addon, idx) => (
                         <div key={idx} className="flex flex-col items-center group cursor-pointer">
-                          <div className="w-[75px] h-[75px] rounded-full overflow-hidden bg-white mb-2 shadow-md group-hover:scale-105 transition-transform duration-200"><img src={addon.img} alt={addon.name} className="w-full h-full object-cover" /></div>
+                          <div className="w-[75px] h-[75px] rounded-full overflow-hidden bg-white mb-2 shadow-md group-hover:scale-105 transition-transform duration-200"><img src={getAssetUrl(addon.img)} alt={addon.name} className="w-full h-full object-cover" /></div>
                           <span className="text-[12px] font-semibold text-center leading-tight px-1">{addon.name}</span>
                           {addon.price && <span className="text-[10px] font-semibold text-yellow-300 mt-0.5">{addon.price}</span>}
                         </div>
@@ -764,7 +765,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
                     <div className="grid grid-cols-3 gap-y-6 gap-x-2 pt-2 pb-4">
                       {hotpotAddOns.map((addon, idx) => (
                         <div key={idx} className="flex flex-col items-center group cursor-pointer">
-                          <div className="w-[75px] h-[75px] rounded-full overflow-hidden bg-white mb-2 shadow-md group-hover:scale-105 transition-transform duration-200"><img src={addon.img} alt={addon.name} className="w-full h-full object-cover" /></div>
+                          <div className="w-[75px] h-[75px] rounded-full overflow-hidden bg-white mb-2 shadow-md group-hover:scale-105 transition-transform duration-200"><img src={getAssetUrl(addon.img)} alt={addon.name} className="w-full h-full object-cover" /></div>
                           <span className="text-[12px] font-semibold text-center leading-tight px-1">{addon.name}</span>
                           {addon.price && <span className="text-[10px] font-semibold text-yellow-300 mt-0.5">{addon.price}</span>}
                         </div>
@@ -822,7 +823,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
                 </div>
                 <div className="flex flex-col sm:flex-row px-6 sm:px-14 gap-6 sm:gap-12 mb-10 items-center sm:items-start text-center sm:text-left">
                   <div className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] rounded-full overflow-hidden border-2 border-gray-100 shadow-lg shrink-0">
-                    <img src="./gc-logo.png" alt="GC Logo" className="w-full h-full object-cover" />
+                    <img src={getAssetUrl('gc-logo.png')} alt="GC Logo" className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-1 flex flex-col pt-0 sm:pt-4 items-center sm:items-start">
                     <div className="flex flex-col items-center sm:items-start pt-2">
@@ -839,7 +840,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 px-6 sm:px-14 pb-20">
                   {highlightPhotos.map((url, idx) => (
                     <div key={idx} className="aspect-square rounded-xl overflow-hidden shadow-md hover:scale-[1.03] transition-transform duration-300 cursor-pointer border border-gray-100">
-                      <img src={url} alt={`Highlight ${idx}`} className="w-full h-full object-cover" />
+                      <img src={getAssetUrl(url)} alt={`Highlight ${idx}`} className="w-full h-full object-cover" />
                     </div>
                   ))}
                 </div>

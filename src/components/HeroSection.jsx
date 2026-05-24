@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import kimchiHeroImg from '../assets/kimchi/kimchi_new.jpg';
+import { getAssetUrl } from '../utils/assets';
 
 const slides = [
   {
@@ -113,7 +114,7 @@ const HeroSection = ({ onOrderClick }) => {
               {/* Background image — clearly visible */}
               <div className="absolute inset-0">
                 <img
-                  src={slide.img}
+                  src={getAssetUrl(slide.img)}
                   alt=""
                   className="w-full h-full object-cover opacity-50 mix-blend-luminosity"
                   draggable={false}
@@ -140,7 +141,7 @@ const HeroSection = ({ onOrderClick }) => {
                     className="hidden lg:block w-[320px] h-[320px] rounded-2xl overflow-hidden shrink-0 transform hover:scale-[1.03] transition-all duration-500"
                     style={{ filter: 'drop-shadow(0 25px 35px rgba(0,0,0,0.8))' }}
                   >
-                    <img src={slide.img} alt={slide.subtitle} className="w-full h-full object-cover" draggable={false} />
+                    <img src={getAssetUrl(slide.img)} alt={slide.subtitle} className="w-full h-full object-cover" draggable={false} />
                   </div>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { getAssetUrl } from '../utils/assets';
 
 const OrdersModal = ({ isOpen, onClose, orders = [], onCancelOrders }) => {
   const { t } = useLanguage();
@@ -135,7 +136,7 @@ const OrdersModal = ({ isOpen, onClose, orders = [], onCancelOrders }) => {
                       <div key={idx} className="flex items-start space-x-5">
                         <div className="w-20 h-20 bg-gray-50 rounded-2xl overflow-hidden shrink-0 border border-gray-100 shadow-sm group-hover:scale-105 transition-transform duration-500">
                           {img ? (
-                            <img src={img} alt={name} className="w-full h-full object-cover" />
+                            <img src={getAssetUrl(img)} alt={name} className="w-full h-full object-cover" />
                           ) : (
                             <div className="w-full h-full flex items-center justify-center">
                               <svg className="w-10 h-10 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">

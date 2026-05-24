@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { getAssetUrl } from '../utils/assets';
 
 const SignupPage = ({ onLoginClick }) => {
   const { t } = useLanguage();
@@ -8,7 +9,7 @@ const SignupPage = ({ onLoginClick }) => {
       {/* Logo */}
       <div className="mb-8 flex justify-center">
         <img
-          src="./gc-logo.png"
+          src={getAssetUrl('gc-logo.png')}
           alt="G.C. Korean BBQ Logo"
           className="w-32 h-auto"
         />

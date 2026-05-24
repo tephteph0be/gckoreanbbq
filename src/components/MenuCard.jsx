@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../utils/assets';
 
 const MenuCard = ({ title, subtitle, details, price, isRice, imageSrc, onOrderNow }) => {
   return (
@@ -38,7 +39,7 @@ const MenuCard = ({ title, subtitle, details, price, isRice, imageSrc, onOrderNo
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#2b0101] via-transparent to-transparent z-10 w-8"></div>
         <img
-          src={imageSrc}
+          src={getAssetUrl(imageSrc)}
           alt={title}
           className="w-full h-full object-cover"
         />

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { getAssetUrl } from '../utils/assets';
 
 const OrderSummaryModal = ({ isOpen, onClose, product, onProceed }) => {
   const { t } = useLanguage();
@@ -71,7 +72,7 @@ const OrderSummaryModal = ({ isOpen, onClose, product, onProceed }) => {
           {items.filter(i => i.isMain).map(item => (
             <div key={item.id} className="flex items-center space-x-2">
               <div className="w-10 h-10 rounded-lg overflow-hidden shadow-sm border border-gray-100 shrink-0">
-                <img src={item.img} alt={item.name} className="w-full h-full object-cover" />
+                <img src={getAssetUrl(item.img)} alt={item.name} className="w-full h-full object-cover" />
               </div>
               <div className="flex-1 flex flex-col min-w-0">
                 <h3 className="text-[12px] font-bold text-gray-800 leading-tight truncate">{item.name}</h3>
@@ -103,7 +104,7 @@ const OrderSummaryModal = ({ isOpen, onClose, product, onProceed }) => {
                 {items.filter(i => !i.isMain).map(item => (
                   <div key={item.id} className="flex items-center space-x-2">
                     <div className="w-9 h-9 rounded-full overflow-hidden border border-gray-100 shrink-0">
-                      <img src={item.img} alt={item.name} className="w-full h-full object-cover" />
+                      <img src={getAssetUrl(item.img)} alt={item.name} className="w-full h-full object-cover" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h5 className="text-[11px] font-semibold text-gray-700 leading-tight truncate">{item.name}</h5>

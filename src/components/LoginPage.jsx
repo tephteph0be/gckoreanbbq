@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { getAssetUrl } from '../utils/assets';
 
 const TIME_SLOTS = [
   '10:00 AM - 11:00 AM',
@@ -331,7 +332,7 @@ const LoginPage = ({ isOpen, onClose, onLoginSuccess, requireOrderChoice = false
                 </button>
                 <div className="w-24 h-24 mb-3">
                   <img
-                    src="./gc-logo.png"
+                    src={getAssetUrl('gc-logo.png')}
                     alt="Logo"
                     className="w-full h-full object-contain rounded-full"
                   />

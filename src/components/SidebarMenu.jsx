@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { getAssetUrl } from '../utils/assets';
 
 const SidebarMenu = ({ 
   isOpen, 
@@ -42,7 +43,7 @@ const SidebarMenu = ({
           {/* Logo */}
           <div className="w-32 h-32 mb-4 mt-2">
             <img
-              src="./gc-logo.png"
+              src={getAssetUrl('gc-logo.png')}
               alt="Logo"
               className="w-full h-full object-cover rounded-full"
             />

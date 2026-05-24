@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { getAssetUrl } from '../utils/assets';
 
 const CheckoutModal = ({ isOpen, onClose, cartItems = [], onSelectItemFulfillment, onProceed }) => {
   const { t } = useLanguage();
@@ -93,7 +94,7 @@ const CheckoutModal = ({ isOpen, onClose, cartItems = [], onSelectItemFulfillmen
 
                   <div className="flex items-center space-x-4 pl-8">
                     <div className="w-16 h-16 rounded-xl overflow-hidden shadow-sm border border-gray-100 shrink-0">
-                      <img src={img} alt={name} className="w-full h-full object-cover" />
+                      <img src={getAssetUrl(img)} alt={name} className="w-full h-full object-cover" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-[15px] font-bold text-gray-900 truncate">{name}</h3>
