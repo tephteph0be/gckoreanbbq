@@ -713,6 +713,13 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
           {!['Customer Highlights', 'Corporate Information'].includes(activeCategory) && (
             <div className="lg:hidden w-full shrink-0">
             <div className="flex space-x-3 overflow-x-auto pb-2 pt-1 w-full touch-pan-x scrollbar-thin scrollbar-thumb-[#3D1700] scrollbar-track-transparent" style={{ scrollbarWidth: 'thin', scrollbarColor: '#ffffff transparent' }}>
+              {/* All button */}
+              <div
+                onClick={() => handleCategoryClick(null)}
+                className={`shrink-0 h-10 px-4 rounded-full flex items-center justify-center font-bold text-sm shadow-sm transition-all duration-200 cursor-pointer hover:bg-[#3D1700] hover:text-white ${!activeCategory && searchCategory === 'All' ? 'bg-[#310c0c] text-white' : 'bg-white text-black'}`}
+              >
+                All
+              </div>
               {categories.map((cat, idx) => {
                 const isActive = activeCategory === cat.name || searchCategory === cat.name;
                 return (
