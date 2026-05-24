@@ -8,14 +8,14 @@ const FeaturedMenu = ({ onOrderNow }) => {
     {
       title: t('food_bilao'),
       details: t('food_bilao_desc'),
-      imageSrc: "/food-bilao.jpg.jpg",
+      imageSrc: "./food-bilao.jpg.jpg",
       price: 599.00,
       inclusion: "Any gatherings for this Holy Week? You might want to try our Food Bilao.\n\nGood for 4-5 Persons\nIncludes assorted Korean Bbq meats, Japchae, Rice, and side dishes."
     },
     {
       title: t('hero_subtitle'),
       subtitle: t('hero_title'),
-      imageSrc: "/kimchi-product.jpg.jpg",
+      imageSrc: "./kimchi-product.jpg.jpg",
       price: 65.00,
       inclusion: "Your all time favorite Kimchi\n\nAuthentic, traditionally fermented Korean Kimchi. Perfect as a side dish or for cooking."
     },
@@ -24,7 +24,7 @@ const FeaturedMenu = ({ onOrderNow }) => {
       subtitle: t('hotpot_desc'),
       details: t('rabokki'),
       price: "399.00",
-      imageSrc: "/hotpot-ramen.jpg.jpg",
+      imageSrc: "./hotpot-ramen.jpg.jpg",
       inclusion: "Hotpot Set C (for 3 Person) RABOKKI\n\nA delicious and spicy combination of Ramen and Tteokbokki (Korean Rice Cakes) in our signature hotpot broth."
     },
     {

@@ -11,22 +11,22 @@ const slides = [
   {
     subtitle: 'Food Bilao',
     title: 'Any gatherings for this Holy Week? Try our Food Bilao',
-    img: '/food-bilao.jpg.jpg',
+    img: './food-bilao.jpg.jpg',
   },
   {
     subtitle: 'Hotpot',
     title: "Set C (for 3 Person)\nRABOKKI \u00A0 ₱ 399.00",
-    img: '/hotpot-ramen.jpg.jpg',
+    img: './hotpot-ramen.jpg.jpg',
   },
   {
     subtitle: 'Last day of our',
     title: 'UNLIMITED RICE TODAY!!!',
-    img: '/rice-cup.png',
+    img: './rice-cup.png',
   },
   {
     subtitle: 'Samgyupsal Special',
     title: "Set 3 (for 4-6 Person)\n₱ 899.00",
-    img: '/food-bilao.jpg.jpg',
+    img: './food-bilao.jpg.jpg',
   },
 ];
 

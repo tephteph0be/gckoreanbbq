@@ -6,10 +6,10 @@ import CorporateInformation from './CorporateInformation';
 import Footer from './Footer';
 
 const categories = [
-  { name: 'Samgyupsal', img: '/samgyupsal-cat.jpg.jpg' },
+  { name: 'Samgyupsal', img: './samgyupsal-cat.jpg.jpg' },
   { name: 'Hotpot', img: 'https://i.redd.it/samgyup-or-hotpot-v0-tvjk75zo1ghg1.jpg?width=2101&format=pjpg&auto=webp&s=11693d514d2a63c91d748066718b56350c6686ab' },
-  { name: 'GC Short Order', img: '/short-order.png' },
-  { name: 'Samgyup On The Go!', img: '/samgyup-on-the-go.png' },
+  { name: 'GC Short Order', img: './short-order.png' },
+  { name: 'Samgyup On The Go!', img: './samgyup-on-the-go.png' },
   { name: 'BBQ Meals', img: 'https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?auto=format&fit=crop&q=80&w=300' },
   { name: 'GC Dessert', img: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=300' }
 ];
@@ -18,19 +18,19 @@ const samgyupsalItems = [
   {
     title: 'Set 1 ( for 2 Person)',
     price: '399.00',
-    img: '/samgyup-set1.jpg.png',
+    img: './samgyup-set1.jpg.png',
     inclusion: 'UNLI Rice (For 2 Person)\n1 Platter Lettuce\n3 Kinds of Side Dish (Kimchi, Potato, Cucumber)\n3 Flavored Pork Meat (200 grams)\n3 Kinds of Sauce Mayo, Chili Oil, Teriyaki)'
   },
   {
     title: 'Set 2 ( for 3 Person )',
     price: '499.00',
-    img: '/samgyup-set2.jpg.jpg',
+    img: './samgyup-set2.jpg.jpg',
     inclusion: 'UNLI Rice (For 3 Person)\n1 Platter Lettuce\n4 Kinds of Side Dish: (Kimchi, Potato, Cucumber, Salad Lettuce)\n3 Flavored Pork Meat (300 grams)\n4 Kinds of Sauce\nMayo, Chili Oil, Teriyaki, Samjang)'
   },
   {
     title: 'Set 3 ( for 4-6 Person)',
     price: '899.00',
-    img: '/samgyup-set3.jpg.jpg',
+    img: './samgyup-set3.jpg.jpg',
     inclusion: 'UNLI Rice (For 4-6 Person)\n2 Platter Lettuce\n5 Kinds of Side Dish: (Kimchi, Potato, Cucumber, Salad Lettuce, Egg Omelette)\n3 Flavored Pork Meat (600 grams)\n5 Kinds of Sauce:\nMayo, Chili Oil, Teriyaki, Samjang, Gochujang'
   }
 ];
@@ -45,7 +45,7 @@ const hotpotItems = [
   {
     title: 'Set B ( for 6 Person )',
     price: '999.00',
-    img: '/hotpot-setb.jpg.jfif',
+    img: './hotpot-setb.jpg.jfif',
     inclusion: '2 Choice of Soup Base\nLarge Platter Assorted Vegetables\n300g Beef, 300g Pork & 300g Chicken\nDouble Portion Noodles & Seafood Balls'
   },
   {
@@ -60,19 +60,19 @@ const shortOrderItems = [
   {
     title: 'Special Pancit Canton',
     price: '189.00',
-    img: '/pancit-canton.jpg.jpg',
+    img: './pancit-canton.jpg.jpg',
     inclusion: 'Stir-fried Noodles\nFresh Vegetables (Carrots, Cabbage)\nPork & Shrimp Toppings\nSpecial Savory Sauce'
   },
   {
     title: 'Korean Fried Chicken',
     price: '189.00',
-    img: '/korean-fried-chicken.jpg',
+    img: './korean-fried-chicken.jpg',
     inclusion: '6 Pieces Crispy Chicken\nChoice of Sauce (Soy Garlic/Spicy)\nPickled Radish Side\n1 Cup Steamed Rice'
   },
   {
     title: 'Pork Sisig',
     price: '189.00',
-    img: '/pork-sisig.jpg',
+    img: './pork-sisig.jpg',
     inclusion: 'Chopped Crispy Pork Face\nOnions & Chili Peppers\nSpecial Sisig Sauce\nTopped with Raw Egg'
   },
   { title: 'Four Season', price: '189.00', img: 'https://s3-media0.fl.yelpcdn.com/bphoto/xKgWP5ESPu9r8ehuzZsNNQ/258s.jpg' },
@@ -80,7 +80,7 @@ const shortOrderItems = [
   { title: 'Calamares', price: '189.00', img: 'https://images.deliveryhero.io/image/foodpanda/recipes/calamares-recipe-1.jpg' },
   { title: 'Fried Samgyup', price: '189.00', img: 'https://thefatbutcherph.com/cdn/shop/articles/ChatGPT_Image_Sep_27_2025_09_33_12_AM.png?v=1758937018' },
   { title: 'Tempura', price: '189.00', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ8IEKp5_W_UHD2rkZ4zIDF4i3ciyuuACung&s' },
-  { title: 'Pork Cutlet', price: '189.00', img: '/pork cutlets.jpg' }
+  { title: 'Pork Cutlet', price: '189.00', img: './pork cutlets.jpg' }
 ];
 
 const dessertItems = [
@@ -94,25 +94,25 @@ const onTheGoItems = [
     title: 'Pork SamgyupSML',
     priceRange: '79.00 - 159.00',
     badge: 'P1',
-    img: '/pork-samgyup.jpg'
+    img: './pork-samgyup.jpg'
   },
   {
     title: 'Beef SamgyupSML',
     priceRange: '89.00 - 189.00',
     badge: 'B2',
-    img: '/beef-samgyup.jpg'
+    img: './beef-samgyup.jpg'
   },
   {
     title: 'Chicken SamgyupSML',
     priceRange: '69.00 - 119.00',
     badge: 'C3',
-    img: '/chicken-samgyup.jpg'
+    img: './chicken-samgyup.jpg'
   }
 ];
 
 const bbqMealsItems = [
-  { title: 'Pork Cutlet', price: '99.00', img: '/pork cutlets.jpg' },
-  { title: 'Chicken Inasal', price: '99.00', img: '/korean-fried-chicken.jpg' },
+  { title: 'Pork Cutlet', price: '99.00', img: './pork cutlets.jpg' },
+  { title: 'Chicken Inasal', price: '99.00', img: './korean-fried-chicken.jpg' },
   { title: 'Spicy Bulgogi', price: '149.00', img: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/10/14/DV3413__spicy-bork-bulgogi_s4x3.jpg.rend.hgtvcom.616.462.suffix/1634235905928.webp' },
   { title: 'Dark Bulgogi', price: '149.00', img: 'https://mykoreankitchen.com/wp-content/uploads/2016/08/1.-Spicy-Pork-Bulgogi-Rice-Bowl-500x500.jpg' },
   { title: 'Mixed Seafoods', price: '149.00', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStbJKZ6R1v3VJepf1CzeecCBRaP75RTv2aug&s' },
@@ -122,10 +122,10 @@ const bbqMealsItems = [
 const samgyupsalAddOns = [
   { name: '1 Cup Rice', price: '₱ 20', img: 'rice-cup.png' },
   { name: 'Kimchi', price: '₱ 30', img: 'https://delishglobe.com/wp-content/uploads/2024/12/Kimchi-Fermented-Vegetables.png' },
-  { name: '150 Gram Beef', price: '₱ 150', img: '/beef-samgyup.jpg' },
+  { name: '150 Gram Beef', price: '₱ 150', img: './beef-samgyup.jpg' },
   { name: 'Cheese Sauce', price: '₱ 35', img: 'cheese-sauce.png' },
-  { name: '150 Gram Pork', price: '₱ 150', img: '/pork-samgyup.jpg' },
-  { name: '150 Gram Chicken', price: '₱ 120', img: '/chicken-samgyup.jpg' }
+  { name: '150 Gram Pork', price: '₱ 150', img: './pork-samgyup.jpg' },
+  { name: '150 Gram Chicken', price: '₱ 120', img: './chicken-samgyup.jpg' }
 ];
 
 const hotpotAddOns = [
@@ -138,18 +138,18 @@ const hotpotAddOns = [
 ];
 
 const highlightPhotos = [
-  "/Highlight 0.jpeg",
-  "/H2.jpg",
-  "/H3.jpg",
-  "/H4.jpg",
-  "/H5.jpg",
-  "/H6.jpg",
-  "/H7.jpg",
-  "/H8.jpg",
-  "/H9.jpg",
-  "/H10.jpg",
-  "/H11.jpg",
-  "/H12.jpg"
+  "./Highlight 0.jpeg",
+  "./H2.jpg",
+  "./H3.jpg",
+  "./H4.jpg",
+  "./H5.jpg",
+  "./H6.jpg",
+  "./H7.jpg",
+  "./H8.jpg",
+  "./H9.jpg",
+  "./H10.jpg",
+  "./H11.jpg",
+  "./H12.jpg"
 ];
 
 const Banner = ({ onOrderNow }) => {
@@ -161,20 +161,20 @@ const Banner = ({ onOrderNow }) => {
       id: 1,
       subtitle: t('hero_subtitle'),
       title: t('hero_title'),
-      image: "/kimchi-product.jpg.jpg"
+      image: "./kimchi-product.jpg.jpg"
     },
     {
       id: 2,
       subtitle: "FOOD BILAO",
       title: "Any gatherings for this Holy Week? Try our Food Bilao",
       // Using a photo from the highlights that resembles a food bilao/tray
-      image: "/food-bilao.jpg.jpg"
+      image: "./food-bilao.jpg.jpg"
     },
     {
       id: 3,
       subtitle: "SPECIAL OFFER",
       title: "Experience authentic Korean dining at home",
-      image: "/gc-logo.png"
+      image: "./gc-logo.png"
     }
   ];
 
@@ -489,7 +489,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
             </button>
             <div onClick={() => { handleCategoryClick(null); setSelectedProduct(null); }} className="flex items-center space-x-1.5 sm:space-x-3 cursor-pointer">
               <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-white border border-white/20 shrink-0">
-                <img src="/gc-logo.png" alt="Logo" className="w-full h-full object-cover" />
+                <img src="./gc-logo.png" alt="Logo" className="w-full h-full object-cover" />
               </div>
               <span className="text-sm sm:text-2xl font-bold font-display tracking-tight text-white whitespace-nowrap">G.C. KOREAN BBQ</span>
             </div>
@@ -822,7 +822,7 @@ const OrderPage = ({ initialProduct, onClearInitialProduct, onMenuClick, onCartC
                 </div>
                 <div className="flex flex-col sm:flex-row px-6 sm:px-14 gap-6 sm:gap-12 mb-10 items-center sm:items-start text-center sm:text-left">
                   <div className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] rounded-full overflow-hidden border-2 border-gray-100 shadow-lg shrink-0">
-                    <img src="/gc-logo.png" alt="GC Logo" className="w-full h-full object-cover" />
+                    <img src="./gc-logo.png" alt="GC Logo" className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-1 flex flex-col pt-0 sm:pt-4 items-center sm:items-start">
                     <div className="flex flex-col items-center sm:items-start pt-2">

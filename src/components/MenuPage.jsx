@@ -20,7 +20,7 @@ const MenuPage = ({ onSignupClick, onMenuClick }) => {
           {/* Logo & Brand */}
           <div className="flex items-center space-x-2 sm:space-x-3">
             <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden bg-[#5B0F0F] shrink-0">
-              <img src="/gc-logo.png" className="w-full h-full object-cover" alt="Logo" />
+              <img src="./gc-logo.png" className="w-full h-full object-cover" alt="Logo" />
             </div>
             <span className="text-lg sm:text-2xl font-bold font-display tracking-tight whitespace-nowrap">G.C. KOREAN BBQ</span>
           </div>

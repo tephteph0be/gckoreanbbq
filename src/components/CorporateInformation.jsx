@@ -49,7 +49,7 @@ const CorporateInformation = ({ onClose }) => {
              
              {/* Logo */}
              <div className="w-48 h-48 sm:w-56 sm:h-56 shrink-0 flex items-center justify-center">
-               <img src="/gc-logo.png" alt="GC Korean BBQ Logo" className="w-full h-full object-contain" />
+               <img src="./gc-logo.png" alt="GC Korean BBQ Logo" className="w-full h-full object-contain" />
              </div>
           </div>
 

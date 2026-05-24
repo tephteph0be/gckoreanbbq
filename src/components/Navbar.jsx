@@ -23,7 +23,7 @@ const Navbar = ({ onMenuClick, onLoginClick, onOrderClick, isLoggedIn, onLogout,
           <div className="flex items-center space-x-1.5 sm:space-x-3" onClick={onOrderClick} style={{ cursor: 'pointer' }}>
             <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-1 border-white bg-white shrink-0">
               <div className="w-full h-full flex items-center justify-center bg-gray-900 text-xs font-bold text-maroon-500 text-center leading-tight">
-                <img src="/gc-logo.png" alt="GC Logo" />
+                <img src="./gc-logo.png" alt="GC Logo" />
               </div>
             </div>
             <span className="text-[15px] sm:text-2xl font-bold font-display tracking-tight mt-1 whitespace-nowrap">G.C. KOREAN BBQ</span>

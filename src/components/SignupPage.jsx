@@ -8,7 +8,7 @@ const SignupPage = ({ onLoginClick }) => {
       {/* Logo */}
       <div className="mb-8 flex justify-center">
         <img
-          src="/gc-logo.png"
+          src="./gc-logo.png"
           alt="G.C. Korean BBQ Logo"
           className="w-32 h-auto"
         />

@@ -42,7 +42,7 @@ const SidebarMenu = ({
           {/* Logo */}
           <div className="w-32 h-32 mb-4 mt-2">
             <img
-              src="/gc-logo.png"
+              src="./gc-logo.png"
               alt="Logo"
               className="w-full h-full object-cover rounded-full"
             />

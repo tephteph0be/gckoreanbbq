@@ -331,7 +331,7 @@ const LoginPage = ({ isOpen, onClose, onLoginSuccess, requireOrderChoice = false
                 </button>
                 <div className="w-24 h-24 mb-3">
                   <img
-                    src="/gc-logo.png"
+                    src="./gc-logo.png"
                     alt="Logo"
                     className="w-full h-full object-contain rounded-full"
                   />

@@ -10,7 +10,7 @@ const AboutSection = () => {
         {/* Left Side: Logo in White Box */}
         <div className="bg-white p-4 flex-shrink-0 border border-gray-200">
           <img
-            src="/gc-logo.png"
+            src="./gc-logo.png"
             alt="G.C. Korean BBQ Mascot"
             className="w-[280px] h-[280px] object-cover"
           />
